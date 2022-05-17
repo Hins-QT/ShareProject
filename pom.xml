@@ -18,6 +18,7 @@
         <module>consumer</module>
         <module>spi-jdbc</module>
         <module>easy-demo</module>
+        <module>application</module>
     </modules>
     <dependencies>
         <dependency>

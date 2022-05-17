@@ -27,6 +27,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.hins</groupId>
+            <artifactId>consumer</artifactId>
+            <version>1.0-release</version>
+        </dependency>
     </dependencies>
 
     <build>
