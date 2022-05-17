@@ -5,10 +5,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.hins</groupId>
-  <artifactId>dubbo-consumer</artifactId>
+  <artifactId>consumer</artifactId>
   <version>1.0-release</version>
 
-  <name>dubbo-consumer</name>
+  <name>consumer</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
