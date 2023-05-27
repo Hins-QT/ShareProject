@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hins.mybatis.mapper.ScmStoreMapper" >
+  <insert id="insert" parameterType="com.hins.mybatis.model.ScmStore" >
+    insert into scm_store (warehouse_company_id, warehouse_company_name, 
+      warehouse_id, warehouse_name, cargo_owner_type, 
+      cargo_owner_id, cargo_owner_name, cargo_owner_province_id, 
+      cargo_owner_province_name, cargo_owner_city_id, 
+      cargo_owner_city_name, cargo_owner_county_id, 
+      cargo_owner_county_name, cargo_owner_company_id, 
+      cargo_owner_company_name, categ_one_id, categ_two_id, 
+      categ_one_name, categ_two_name, goods_id, 
+      goods_name, number, sale_price, 
+      cost_price, po_price, untaxed_price, 
+      sale_order_id, pack_spec_id, pack_spec_name, 
+      unit_id, unit_name, model_id, 
+      model_name, creater, updater
+      )
+    values (#{warehouseCompanyId,jdbcType=INTEGER}, #{warehouseCompanyName,jdbcType=VARCHAR}, 
+      #{warehouseId,jdbcType=INTEGER}, #{warehouseName,jdbcType=VARCHAR}, #{cargoOwnerType,jdbcType=SMALLINT}, 
+      #{cargoOwnerId,jdbcType=BIGINT}, #{cargoOwnerName,jdbcType=VARCHAR}, #{cargoOwnerProvinceId,jdbcType=INTEGER}, 
+      #{cargoOwnerProvinceName,jdbcType=VARCHAR}, #{cargoOwnerCityId,jdbcType=INTEGER}, 
+      #{cargoOwnerCityName,jdbcType=VARCHAR}, #{cargoOwnerCountyId,jdbcType=INTEGER}, 
+      #{cargoOwnerCountyName,jdbcType=VARCHAR}, #{cargoOwnerCompanyId,jdbcType=INTEGER}, 
+      #{cargoOwnerCompanyName,jdbcType=VARCHAR}, #{categOneId,jdbcType=INTEGER}, #{categTwoId,jdbcType=INTEGER}, 
+      #{categOneName,jdbcType=VARCHAR}, #{categTwoName,jdbcType=VARCHAR}, #{goodsId,jdbcType=VARCHAR}, 
+      #{goodsName,jdbcType=VARCHAR}, #{number,jdbcType=DECIMAL}, #{salePrice,jdbcType=INTEGER}, 
+      #{costPrice,jdbcType=INTEGER}, #{poPrice,jdbcType=INTEGER}, #{untaxedPrice,jdbcType=INTEGER}, 
+      #{saleOrderId,jdbcType=VARCHAR}, #{packSpecId,jdbcType=INTEGER}, #{packSpecName,jdbcType=VARCHAR}, 
+      #{unitId,jdbcType=INTEGER}, #{unitName,jdbcType=VARCHAR}, #{modelId,jdbcType=INTEGER}, 
+      #{modelName,jdbcType=VARCHAR}, #{creater,jdbcType=VARCHAR}, #{updater,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.hins.mybatis.model.ScmStore" >
+    insert into scm_store
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="warehouseCompanyId != null" >
+        warehouse_company_id,
+      </if>
+      <if test="warehouseCompanyName != null" >
+        warehouse_company_name,
+      </if>
+      <if test="warehouseId != null" >
+        warehouse_id,
+      </if>
+      <if test="warehouseName != null" >
+        warehouse_name,
+      </if>
+      <if test="cargoOwnerType != null" >
+        cargo_owner_type,
+      </if>
+      <if test="cargoOwnerId != null" >
+        cargo_owner_id,
+      </if>
+      <if test="cargoOwnerName != null" >
+        cargo_owner_name,
+      </if>
+      <if test="cargoOwnerProvinceId != null" >
+        cargo_owner_province_id,
+      </if>
+      <if test="cargoOwnerProvinceName != null" >
+        cargo_owner_province_name,
+      </if>
+      <if test="cargoOwnerCityId != null" >
+        cargo_owner_city_id,
+      </if>
+      <if test="cargoOwnerCityName != null" >
+        cargo_owner_city_name,
+      </if>
+      <if test="cargoOwnerCountyId != null" >
+        cargo_owner_county_id,
+      </if>
+      <if test="cargoOwnerCountyName != null" >
+        cargo_owner_county_name,
+      </if>
+      <if test="cargoOwnerCompanyId != null" >
+        cargo_owner_company_id,
+      </if>
+      <if test="cargoOwnerCompanyName != null" >
+        cargo_owner_company_name,
+      </if>
+      <if test="categOneId != null" >
+        categ_one_id,
+      </if>
+      <if test="categTwoId != null" >
+        categ_two_id,
+      </if>
+      <if test="categOneName != null" >
+        categ_one_name,
+      </if>
+      <if test="categTwoName != null" >
+        categ_two_name,
+      </if>
+      <if test="goodsId != null" >
+        goods_id,
+      </if>
+      <if test="goodsName != null" >
+        goods_name,
+      </if>
+      <if test="number != null" >
+        number,
+      </if>
+      <if test="salePrice != null" >
+        sale_price,
+      </if>
+      <if test="costPrice != null" >
+        cost_price,
+      </if>
+      <if test="poPrice != null" >
+        po_price,
+      </if>
+      <if test="untaxedPrice != null" >
+        untaxed_price,
+      </if>
+      <if test="saleOrderId != null" >
+        sale_order_id,
+      </if>
+      <if test="packSpecId != null" >
+        pack_spec_id,
+      </if>
+      <if test="packSpecName != null" >
+        pack_spec_name,
+      </if>
+      <if test="unitId != null" >
+        unit_id,
+      </if>
+      <if test="unitName != null" >
+        unit_name,
+      </if>
+      <if test="modelId != null" >
+        model_id,
+      </if>
+      <if test="modelName != null" >
+        model_name,
+      </if>
+      <if test="creater != null" >
+        creater,
+      </if>
+      <if test="updater != null" >
+        updater,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="warehouseCompanyId != null" >
+        #{warehouseCompanyId,jdbcType=INTEGER},
+      </if>
+      <if test="warehouseCompanyName != null" >
+        #{warehouseCompanyName,jdbcType=VARCHAR},
+      </if>
+      <if test="warehouseId != null" >
+        #{warehouseId,jdbcType=INTEGER},
+      </if>
+      <if test="warehouseName != null" >
+        #{warehouseName,jdbcType=VARCHAR},
+      </if>
+      <if test="cargoOwnerType != null" >
+        #{cargoOwnerType,jdbcType=SMALLINT},
+      </if>
+      <if test="cargoOwnerId != null" >
+        #{cargoOwnerId,jdbcType=BIGINT},
+      </if>
+      <if test="cargoOwnerName != null" >
+        #{cargoOwnerName,jdbcType=VARCHAR},
+      </if>
+      <if test="cargoOwnerProvinceId != null" >
+        #{cargoOwnerProvinceId,jdbcType=INTEGER},
+      </if>
+      <if test="cargoOwnerProvinceName != null" >
+        #{cargoOwnerProvinceName,jdbcType=VARCHAR},
+      </if>
+      <if test="cargoOwnerCityId != null" >
+        #{cargoOwnerCityId,jdbcType=INTEGER},
+      </if>
+      <if test="cargoOwnerCityName != null" >
+        #{cargoOwnerCityName,jdbcType=VARCHAR},
+      </if>
+      <if test="cargoOwnerCountyId != null" >
+        #{cargoOwnerCountyId,jdbcType=INTEGER},
+      </if>
+      <if test="cargoOwnerCountyName != null" >
+        #{cargoOwnerCountyName,jdbcType=VARCHAR},
+      </if>
+      <if test="cargoOwnerCompanyId != null" >
+        #{cargoOwnerCompanyId,jdbcType=INTEGER},
+      </if>
+      <if test="cargoOwnerCompanyName != null" >
+        #{cargoOwnerCompanyName,jdbcType=VARCHAR},
+      </if>
+      <if test="categOneId != null" >
+        #{categOneId,jdbcType=INTEGER},
+      </if>
+      <if test="categTwoId != null" >
+        #{categTwoId,jdbcType=INTEGER},
+      </if>
+      <if test="categOneName != null" >
+        #{categOneName,jdbcType=VARCHAR},
+      </if>
+      <if test="categTwoName != null" >
+        #{categTwoName,jdbcType=VARCHAR},
+      </if>
+      <if test="goodsId != null" >
+        #{goodsId,jdbcType=VARCHAR},
+      </if>
+      <if test="goodsName != null" >
+        #{goodsName,jdbcType=VARCHAR},
+      </if>
+      <if test="number != null" >
+        #{number,jdbcType=DECIMAL},
+      </if>
+      <if test="salePrice != null" >
+        #{salePrice,jdbcType=INTEGER},
+      </if>
+      <if test="costPrice != null" >
+        #{costPrice,jdbcType=INTEGER},
+      </if>
+      <if test="poPrice != null" >
+        #{poPrice,jdbcType=INTEGER},
+      </if>
+      <if test="untaxedPrice != null" >
+        #{untaxedPrice,jdbcType=INTEGER},
+      </if>
+      <if test="saleOrderId != null" >
+        #{saleOrderId,jdbcType=VARCHAR},
+      </if>
+      <if test="packSpecId != null" >
+        #{packSpecId,jdbcType=INTEGER},
+      </if>
+      <if test="packSpecName != null" >
+        #{packSpecName,jdbcType=VARCHAR},
+      </if>
+      <if test="unitId != null" >
+        #{unitId,jdbcType=INTEGER},
+      </if>
+      <if test="unitName != null" >
+        #{unitName,jdbcType=VARCHAR},
+      </if>
+      <if test="modelId != null" >
+        #{modelId,jdbcType=INTEGER},
+      </if>
+      <if test="modelName != null" >
+        #{modelName,jdbcType=VARCHAR},
+      </if>
+      <if test="creater != null" >
+        #{creater,jdbcType=VARCHAR},
+      </if>
+      <if test="updater != null" >
+        #{updater,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+</mapper>
